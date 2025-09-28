@@ -9,9 +9,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxIndexedDBModule, NgxIndexedDBService } from 'ngx-indexed-db';
 import { dbConfig } from 'src/db.config';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, SignUpComponent, LoginComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    SignUpComponent,
+    LoginComponent,
+    DashboardComponent,
+    SidebarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

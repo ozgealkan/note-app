@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private token!: string | null;
-  private user: User | undefined;
+  private _user: User | undefined;
 
   constructor(
     private userService: UserService,
@@ -19,7 +19,7 @@ export class AuthService {
     this.token = localStorage.getItem('token');
     const userString = localStorage.getItem('user');
     if (userString) {
-      this.user = JSON.parse(userString);
+      this._user = JSON.parse(userString);
     }
 
     window.addEventListener('storage', (event) => {
@@ -27,6 +27,10 @@ export class AuthService {
         this.router.navigate(['/login']);
       }
     });
+  }
+
+  get user(): User | undefined {
+    return this._user;
   }
 
   get isAuthenticated() {
@@ -62,7 +66,7 @@ export class AuthService {
   }
 
   setUser(user: User): void {
-    this.user = user;
+    this._user = user;
     localStorage.setItem('user', JSON.stringify(this.user));
     this.setToken();
   }

@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<div class="d-flex h-100">
+  <app-sidebar></app-sidebar>
+  <div class="w-100">
+    <div class="d-flex align-items-center justify-content-between navbar-container">
+      <div class="fs-18 font-weight-700">Notes</div>
+      <a class="add-button fs-15 font-weight-500" routerLink="/create-note">
+        <img src="assets/icons/plus.svg" alt="" /> Add Note
+      </a>
+    </div>
+    <div class="component-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

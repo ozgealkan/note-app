@@ -1,0 +1,48 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark h-100" style="width: 280px">
+  <a
+    href="/"
+    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+  >
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-4 fs-18">DEATH NOTE</span>
+  </a>
+  <hr />
+  <ul class="nav nav-pills flex-column mb-auto fs-16 font-weight-500">
+    <li class="nav-item">
+      <a href="#" class="nav-link active d-flex align-items-center" aria-current="page">
+        <img src="assets/icons/history.svg" alt="" class="icon" />
+        Recent Notes
+      </a>
+    </li>
+    <li>
+      <a routerLink="categories" class="nav-link text-white d-flex align-items-center">
+        <img src="assets/icons/category.svg" alt="" class="icon" />
+        Categories
+      </a>
+    </li>
+    <li>
+      <a routerLink="notes" class="nav-link text-white d-flex align-items-center">
+        <img src="assets/icons/note-draw.svg" alt="" class="icon" />
+        <span>All Notes</span>
+      </a>
+    </li>
+  </ul>
+  <hr />
+  <div class="dropdown">
+    <a
+      href="#"
+      class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+      id="dropdownUser1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img src="assets/images/pp.png" alt="" width="32" height="32" class="rounded-circle me-2" />
+      <span class="fs-16 font-weight-500">{{ userName }}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+      <li><a class="dropdown-item" href="#">Profile</a></li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item" href="#">Sign out</a></li>
+    </ul>
+  </div>
+</div>

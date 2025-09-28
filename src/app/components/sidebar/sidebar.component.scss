@@ -1,0 +1,10 @@
+.nav-pills .nav-link.active {
+  background-color: #4a5158;
+}
+img {
+  &.icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+}
